@@ -1,0 +1,168 @@
+openapi: "3.0.0"
+info:
+  version: 1.0.0
+  title: Marvel API
+  description: API de Marvel
+servers:
+  - url: https://gateway.marvel.com:443
+
+paths:
+  '/v1/public/characters':
+    get:
+      tags:
+        - Characters
+      description: Listado de personajes
+      operationId: getCharacterList
+      parameters:
+        - name: limit
+          description: "límite de resultados"
+          in: query
+          required: false
+          schema:
+            type: integer
+        - name: offset
+          description: "obviar los n primeros resultados"
+          in: query
+          required: false
+          schema:
+            type: integer
+        - name: nameStartsWith
+          description: "filtro por nombre"
+          in: query
+          required: false
+          schema:
+            type: string
+            
+      responses:
+        "200":
+          description: 200 OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CharactersResponse"
+                
+  '/v1/public/characters/{charId}':
+    get:
+      tags:
+        - Characters
+      description: Listado de personajes
+      operationId: getCharacterDetail
+      parameters:
+        - name: charId
+          description: "ID del personaje"
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: 200 OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CharactersResponse"
+                
+
+components:
+  schemas:
+    
+    CharactersResponse:
+      type: object
+      properties:
+        code:
+          type: integer
+        status:
+          type: string
+        copyright:
+          type: string
+        attributionText:
+          type: string
+        attributionHTML:
+          type: string
+        data:
+          $ref: '#/components/schemas/ResponseData'
+        etag:
+          type: string
+    
+    ResponseData:
+      type: object
+      properties:
+        offset:
+          type: integer
+        limit:
+          type: integer
+        total:
+          type: integer
+        count:
+          type: integer
+        results:
+          type: array
+          items: 
+            $ref: '#/components/schemas/CharData'
+            
+    CharData:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        description:
+          type: string
+        modified:
+          type: string
+        resourceURI:
+          type: string
+        urls:
+          type: array
+          items:
+            $ref: '#/components/schemas/CharURL'
+        thumbnail:
+          $ref: '#/components/schemas/CharThumbnail'
+        comics:
+          $ref: '#/components/schemas/CollectionElement'
+        stories:
+          $ref: '#/components/schemas/CollectionElement'
+        events:
+          $ref: '#/components/schemas/CollectionElement'
+        series:
+          $ref: '#/components/schemas/CollectionElement'
+    CharURL:
+      type: object
+      properties:
+        type: 
+          type: string
+        url: 
+          type: string
+    
+    CharThumbnail:
+      type: object
+      properties:
+        path:
+          type: string
+        extension:
+          type: string
+    
+    CollectionElement:
+      type: object
+      properties:
+        available:
+          type: integer
+        returned:
+          type: integer
+        collectionURI:
+          type: string
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/CollectionItem'
+    
+    CollectionItem:
+      type: object
+      properties:
+        resourceURI:
+          type: string
+        name:
+          type: string
+        type:
+          type: string
