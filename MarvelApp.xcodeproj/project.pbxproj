@@ -23,6 +23,7 @@
 		17B78160244EE42000BEE7E5 /* UIViewController+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B7815F244EE42000BEE7E5 /* UIViewController+Additions.swift */; };
 		17B78163244EE57A00BEE7E5 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B78162244EE57A00BEE7E5 /* Provider.swift */; };
 		17B78166244EE5D700BEE7E5 /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B78165244EE5D700BEE7E5 /* ConnectionManager.swift */; };
+		17CA18D224501F7B004C4659 /* MarvelAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CA18D124501F7B004C4659 /* MarvelAppUITests.swift */; };
 		17D9BD62244849100005F919 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D9BD61244849100005F919 /* AppDelegate.swift */; };
 		17D9BD64244849100005F919 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D9BD63244849100005F919 /* SceneDelegate.swift */; };
 		17D9BD6B244849100005F919 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17D9BD69244849100005F919 /* Main.storyboard */; };
@@ -39,6 +40,16 @@
 		17D9BD972448547A0005F919 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D9BD962448547A0005F919 /* Constants.swift */; };
 		F85401C67A18B152392D5BD7 /* Pods_MarvelApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A518233F4A8779F20563475C /* Pods_MarvelApp.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		17CA18D424501F7B004C4659 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17D9BD56244849100005F919 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 17D9BD5D244849100005F919;
+			remoteInfo = MarvelApp;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		12D3302FE60C2A35A51F5299 /* Pods-MarvelApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelApp.debug.xcconfig"; path = "Target Support Files/Pods-MarvelApp/Pods-MarvelApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -58,6 +69,9 @@
 		17B7815F244EE42000BEE7E5 /* UIViewController+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Additions.swift"; sourceTree = "<group>"; };
 		17B78162244EE57A00BEE7E5 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		17B78165244EE5D700BEE7E5 /* ConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionManager.swift; sourceTree = "<group>"; };
+		17CA18CF24501F7B004C4659 /* MarvelAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarvelAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		17CA18D124501F7B004C4659 /* MarvelAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelAppUITests.swift; sourceTree = "<group>"; };
+		17CA18D324501F7B004C4659 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17D9BD5E244849100005F919 /* MarvelApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17D9BD61244849100005F919 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17D9BD63244849100005F919 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +93,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		17CA18CC24501F7B004C4659 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		17D9BD5B244849100005F919 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -192,10 +213,20 @@
 			path = Connection;
 			sourceTree = "<group>";
 		};
+		17CA18D024501F7B004C4659 /* MarvelAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				17CA18D124501F7B004C4659 /* MarvelAppUITests.swift */,
+				17CA18D324501F7B004C4659 /* Info.plist */,
+			);
+			path = MarvelAppUITests;
+			sourceTree = "<group>";
+		};
 		17D9BD55244849100005F919 = {
 			isa = PBXGroup;
 			children = (
 				17D9BD60244849100005F919 /* MarvelApp */,
+				17CA18D024501F7B004C4659 /* MarvelAppUITests */,
 				17D9BD5F244849100005F919 /* Products */,
 				B3F317BE0B45545C24BB7A02 /* Pods */,
 				53072EF39A6A0C978D0D5E37 /* Frameworks */,
@@ -206,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				17D9BD5E244849100005F919 /* MarvelApp.app */,
+				17CA18CF24501F7B004C4659 /* MarvelAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -334,6 +366,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		17CA18CE24501F7B004C4659 /* MarvelAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17CA18D624501F7B004C4659 /* Build configuration list for PBXNativeTarget "MarvelAppUITests" */;
+			buildPhases = (
+				17CA18CB24501F7B004C4659 /* Sources */,
+				17CA18CC24501F7B004C4659 /* Frameworks */,
+				17CA18CD24501F7B004C4659 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				17CA18D524501F7B004C4659 /* PBXTargetDependency */,
+			);
+			name = MarvelAppUITests;
+			productName = MarvelAppUITests;
+			productReference = 17CA18CF24501F7B004C4659 /* MarvelAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		17D9BD5D244849100005F919 /* MarvelApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 17D9BD74244849110005F919 /* Build configuration list for PBXNativeTarget "MarvelApp" */;
@@ -363,6 +413,10 @@
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = Accenture;
 				TargetAttributes = {
+					17CA18CE24501F7B004C4659 = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = 17D9BD5D244849100005F919;
+					};
 					17D9BD5D244849100005F919 = {
 						CreatedOnToolsVersion = 11.2.1;
 					};
@@ -382,11 +436,19 @@
 			projectRoot = "";
 			targets = (
 				17D9BD5D244849100005F919 /* MarvelApp */,
+				17CA18CE24501F7B004C4659 /* MarvelAppUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		17CA18CD24501F7B004C4659 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		17D9BD5C244849100005F919 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -445,6 +507,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		17CA18CB24501F7B004C4659 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17CA18D224501F7B004C4659 /* MarvelAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		17D9BD5A244849100005F919 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -478,6 +548,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		17CA18D524501F7B004C4659 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 17D9BD5D244849100005F919 /* MarvelApp */;
+			targetProxy = 17CA18D424501F7B004C4659 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		17D9BD69244849100005F919 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -498,6 +576,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		17CA18D724501F7B004C4659 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3434XGG5NE;
+				INFOPLIST_FILE = MarvelAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.accenture.MarvelAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MarvelApp;
+			};
+			name = Debug;
+		};
+		17CA18D824501F7B004C4659 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3434XGG5NE;
+				INFOPLIST_FILE = MarvelAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.accenture.MarvelAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MarvelApp;
+			};
+			name = Release;
+		};
 		17D9BD72244849110005F919 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -653,6 +769,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		17CA18D624501F7B004C4659 /* Build configuration list for PBXNativeTarget "MarvelAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17CA18D724501F7B004C4659 /* Debug */,
+				17CA18D824501F7B004C4659 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		17D9BD59244849100005F919 /* Build configuration list for PBXProject "MarvelApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
